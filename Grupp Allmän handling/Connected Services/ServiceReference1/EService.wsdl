@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="EService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:1160/EService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:1160/EService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:1160/EService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EService_WebService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IEService_GetAllCases_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCases" />
+  </wsdl:message>
+  <wsdl:message name="IEService_GetAllCases_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCasesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEService_GetNonStartedCases_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNonStartedCases" />
+  </wsdl:message>
+  <wsdl:message name="IEService_GetNonStartedCases_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNonStartedCasesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEService_GetStartedCases_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStartedCases" />
+  </wsdl:message>
+  <wsdl:message name="IEService_GetStartedCases_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStartedCasesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEService_GetClosedCases_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClosedCases" />
+  </wsdl:message>
+  <wsdl:message name="IEService_GetClosedCases_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClosedCasesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEService_EditCase_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditCase" />
+  </wsdl:message>
+  <wsdl:message name="IEService_EditCase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditCaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEService_GetCasesFromSearchWord_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCasesFromSearchWord" />
+  </wsdl:message>
+  <wsdl:message name="IEService_GetCasesFromSearchWord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCasesFromSearchWordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEService_ValidLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidLogin" />
+  </wsdl:message>
+  <wsdl:message name="IEService_ValidLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEService_CreateCase_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCase" />
+  </wsdl:message>
+  <wsdl:message name="IEService_CreateCase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEService_SendMail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMail" />
+  </wsdl:message>
+  <wsdl:message name="IEService_SendMail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMailResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IEService">
+    <wsdl:operation name="GetAllCases">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEService/GetAllCases" message="tns:IEService_GetAllCases_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEService/GetAllCasesResponse" message="tns:IEService_GetAllCases_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNonStartedCases">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEService/GetNonStartedCases" message="tns:IEService_GetNonStartedCases_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEService/GetNonStartedCasesResponse" message="tns:IEService_GetNonStartedCases_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStartedCases">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEService/GetStartedCases" message="tns:IEService_GetStartedCases_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEService/GetStartedCasesResponse" message="tns:IEService_GetStartedCases_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClosedCases">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEService/GetClosedCases" message="tns:IEService_GetClosedCases_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEService/GetClosedCasesResponse" message="tns:IEService_GetClosedCases_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditCase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEService/EditCase" message="tns:IEService_EditCase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEService/EditCaseResponse" message="tns:IEService_EditCase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCasesFromSearchWord">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEService/GetCasesFromSearchWord" message="tns:IEService_GetCasesFromSearchWord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEService/GetCasesFromSearchWordResponse" message="tns:IEService_GetCasesFromSearchWord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEService/ValidLogin" message="tns:IEService_ValidLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEService/ValidLoginResponse" message="tns:IEService_ValidLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEService/CreateCase" message="tns:IEService_CreateCase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEService/CreateCaseResponse" message="tns:IEService_CreateCase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEService/SendMail" message="tns:IEService_SendMail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEService/SendMailResponse" message="tns:IEService_SendMail_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IEService" type="tns:IEService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllCases">
+      <soap:operation soapAction="http://tempuri.org/IEService/GetAllCases" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNonStartedCases">
+      <soap:operation soapAction="http://tempuri.org/IEService/GetNonStartedCases" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStartedCases">
+      <soap:operation soapAction="http://tempuri.org/IEService/GetStartedCases" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClosedCases">
+      <soap:operation soapAction="http://tempuri.org/IEService/GetClosedCases" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditCase">
+      <soap:operation soapAction="http://tempuri.org/IEService/EditCase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCasesFromSearchWord">
+      <soap:operation soapAction="http://tempuri.org/IEService/GetCasesFromSearchWord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidLogin">
+      <soap:operation soapAction="http://tempuri.org/IEService/ValidLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCase">
+      <soap:operation soapAction="http://tempuri.org/IEService/CreateCase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMail">
+      <soap:operation soapAction="http://tempuri.org/IEService/SendMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EService">
+    <wsdl:port name="BasicHttpBinding_IEService" binding="tns:BasicHttpBinding_IEService">
+      <soap:address location="http://localhost:1160/EService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

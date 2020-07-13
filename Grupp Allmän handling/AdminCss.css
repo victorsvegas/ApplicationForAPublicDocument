@@ -1,0 +1,18 @@
+﻿body {
+    font-family: "Poppins", sans-serif;
+    background-color: white;
+    display: block;
+}
+
+textarea {
+    
+    width:100%;
+}
+
+.DivSize {
+    width: 100%;
+    padding-right: 15px;
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}

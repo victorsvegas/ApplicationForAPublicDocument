@@ -1,0 +1,35 @@
+﻿body {
+    font-family: "Poppins", sans-serif;
+    background-color: white;
+}
+
+.login {
+    width: 30%;
+    display: inline-block;
+    padding: 1rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+label {
+    margin-bottom: .5rem;
+}
+
+#felmeddelande {
+    background-color: white;
+    width: 100%;
+    padding-top: 5px;
+}
+
+.adminlist {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.SearchForm {
+    display:  inline-block;
+}
+
+.List{
+    padding-top: 5em;
+}
